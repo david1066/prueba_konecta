@@ -8,7 +8,7 @@ https://getcomposer.org/
 
 git clone
 
-3. ejecutamos el siguiente comando para instalar las dependencias
+3. ejecutamos el siguiente comando cmd para instalar las dependencias pero dentro del proyecto en la carpeta prueba 
 
 composer install
 
@@ -21,6 +21,6 @@ DB_DATABASE=inventory
 DB_USERNAME=root
 DB_PASSWORD=
 
-5. ejecutamos la migraciones que nos creara las tablas
+5. ejecutamos la migraciones que nos creara las tablas pero dentro del proyecto en la carpeta prueba
 
 php artisan migrate
