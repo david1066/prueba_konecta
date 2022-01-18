@@ -7,6 +7,9 @@
   Agregar nuevo producto
 </a>
 
+<a  class="btn btn-secondary"  href="{{ url('/') }}">
+  ir al menu principal</a>
+
 <br>
 <br>
 

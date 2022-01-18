@@ -49,7 +49,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
                             <div class="flex items-center">
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a  href="{{ url('/producto/index') }}" class="underline text-gray-900 dark:text-white">Gestionar productos</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a  href="{{ url('/producto/index') }}" class="underline text-gray-900 dark:text-white">2. Gestionar productos</a></div>
                             </div>
 
                             <div class="ml-12">
@@ -62,7 +62,7 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
                             <div class="flex items-center">
                                
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a  href="{{ url('/categoria/create') }}"class="underline text-gray-900 dark:text-white">Agregar categorias</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a  href="{{ url('/categoria/create') }}" class="underline text-gray-900 dark:text-white">1. Agregar categorias</a></div>
                             </div>
 
                             <div class="ml-12">
@@ -74,7 +74,7 @@
 
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700">
                             <div class="flex items-center">
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Realizar venta</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a  href="{{ url('/venta/create') }}" class="underline text-gray-900 dark:text-white">3. Realizar venta</a></div>
                             </div>
 
                             <div class="ml-12">
@@ -87,7 +87,7 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
                             <div class="flex items-center">
                                 
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white"><a href="{{ url('/sql/code') }}" class="underline text-gray-900 dark:text-white">Consultas en base de datos</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white"><a href="{{ url('/sql/code') }}" class="underline text-gray-900 dark:text-white">4. Consultas en base de datos</a></div>
                             </div>
 
                             <div class="ml-12">

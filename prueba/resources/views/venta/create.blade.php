@@ -1,52 +1,32 @@
 
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <div class="container">
-<h1>Agregar producto</h1>
-
+<h1>Vender producto</h1>
+<a  class="btn btn-secondary"  href="{{ url('/') }}">
+  ir al menu principal</a>
 <hr>
-<form  method="post" action="{{ url('/producto/store') }}">
+<form  method="post" action="{{ url('/venta/store') }}">
 
  
     @csrf
     @if(isset($status)) 
         <div class="alert alert-{{$status}}" role="alert">
-        {{$message}} <a  class="btn"  href="{{ url('/producto/index') }}">
-  ir a productos</a>
+        {{$message}} 
         </div>
         
     @endif
 
     <div class="form-group">
-        <label>Nombre producto</label>
-        <input type="text" class="form-control" name="nombre" id="nombre" required>
-    </div>
-   
-    <div class="form-group">
-        <label>Rerencia producto</label>
-        <input type="text" class="form-control" name="referencia" id="referencia" required>
-    </div>
-   
-    <div class="form-group">
-        <label>Precio</label>
-        <input type="number" min="0"  step="1"  class="form-control" name="precio" id="precio" required>
-    </div>
-
-
-   <div class="form-group">
-        <label>Peso</label>
-        <input type="number" min="1"  step="1" class="form-control" name="peso" id="peso" required>
-    </div>
-    <div class="form-group">
-        <label>Categoria</label>
-       <select name="categoria_id" class="form-control" required id="categoria_id">
+        <label>Productos</label>
+       <select name="producto_id" class="form-control" required id="producto_id">
            <option value="">Seleccione</option>
-           @foreach($categoria as $value)
-            <option value=" {{$value->id}}"> {{$value->nombre}}</option>
+           @foreach($productos as $value)
+            <option value=" {{$value->id}}"> {{$value->nombre.' - '.$value->stock}} </option>
            @endforeach
        </select>
     </div>
     <div class="form-group">
-        <label>Stock</label>
+        <label>Cantidad</label>
         <input type="number" min="1"  step="1" class="form-control" name="stock" id="stock" required>
     </div>
     

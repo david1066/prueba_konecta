@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
 
+use App\Http\Controllers\VentaController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -36,3 +38,5 @@ Route::delete('/producto/delete/{id}',  [ProductoController::class, 'destroy'])-
 Route::get('/producto/edit/{id}',  [ProductoController::class, 'edit'])->name('producto.edit');
 Route::post('/producto/update/{id}',  [ProductoController::class, 'update'])->name('producto.update');
 
+Route::get('/venta/create',  [VentaController::class, 'create']);
+Route::post('/venta/store',  [VentaController::class, 'store'])->name('venta.store');
