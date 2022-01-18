@@ -24,3 +24,11 @@ DB_PASSWORD=
 5. ejecutamos la migraciones que nos creara las tablas pero dentro del proyecto en la carpeta prueba
 
 php artisan migrate
+
+6. corremos el proyecto con servidor que viene en composer 
+
+php artisan serve
+
+7. en el navegador abrimos la ruta
+
+http://127.0.0.1:8000
