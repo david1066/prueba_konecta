@@ -12,7 +12,27 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ProductoController;
+
 
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/sql/code', function () {
+    return view('sql.index');
+});
+Route::get('/categoria/create', function () {
+    return view('categoria.index');
+});
+
+Route::post('/categoria/store',  [CategoriaController::class, 'store'])->name('categoria.store');
+
+
+Route::get('/producto/index',  [ProductoController::class, 'index']);
+Route::get('/producto/create',  [ProductoController::class, 'create']);
+Route::post('/producto/store',  [ProductoController::class, 'store'])->name('producto.store');
+Route::delete('/producto/delete/{id}',  [ProductoController::class, 'destroy'])->name('producto.delete');
+Route::get('/producto/edit/{id}',  [ProductoController::class, 'edit'])->name('producto.edit');
+Route::post('/producto/update/{id}',  [ProductoController::class, 'update'])->name('producto.update');
+
